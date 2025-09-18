@@ -1,0 +1,38 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cluster nodes: 8
+Job stats:
+job                        count
+-----------------------  -------
+all                            1
+density_cut                    1
+densitycut_eval                1
+epiclomal_basic              300
+epiclomal_region             300
+euclidean_clust                1
+euclidean_eval                 1
+eval_basic                     1
+eval_region                    1
+generate_synthetic_data        1
+hamming_clust                  1
+hamming_eval                   1
+join_npm_methods               1
+pearson_clust                  1
+pearson_eval                   1
+process_npm_methods            1
+total                        614
+
+Select jobs to execute...
+
+[Sun Feb 25 18:01:50 2024]
+rule generate_synthetic_data:
+    output: ~/data/methyeval/linym/Epiclomal/synthetic_data/data/data_incomplete.tsv.gz, ~/data/methyeval/linym/Epiclomal/synthetic_data/data/regions_file.tsv.gz, ~/data/methyeval/linym/Epiclomal/synthetic_data/data/true_clone_membership.tsv.gz, ~/data/methyeval/linym/Epiclomal/synthetic_data/data/bulk_data_sample_1.tsv.gz, ~/data/methyeval/linym/Epiclomal/synthetic_data/data/true_clone_epigenotypes.tsv.gz
+    jobid: 2
+    reason: Missing output files: ~/data/methyeval/linym/Epiclomal/synthetic_data/data/regions_file.tsv.gz, ~/data/methyeval/linym/Epiclomal/synthetic_data/data/bulk_data_sample_1.tsv.gz, ~/data/methyeval/linym/Epiclomal/synthetic_data/data/true_clone_membership.tsv.gz, ~/data/methyeval/linym/Epiclomal/synthetic_data/data/data_incomplete.tsv.gz, ~/data/methyeval/linym/Epiclomal/synthetic_data/data/true_clone_epigenotypes.tsv.gz
+    resources: mem_mb=1000, mem_mib=954, disk_mb=1000, disk_mib=954, tmpdir=<TBD>, h_vmem=5
+
+Error submitting jobscript (exit code 127):
+
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake/log/2024-02-25T180147.595172.snakemake.log

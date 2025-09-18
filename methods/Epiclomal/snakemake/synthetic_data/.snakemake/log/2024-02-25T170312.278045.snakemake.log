@@ -1,0 +1,3 @@
+AttributeError in line 29 of /home/methyeval/program/methyeval/linym/Epiclomal/snakemake/synthetic_data/Snakefile:
+module 'collections' has no attribute 'Iterable'
+  File "/home/methyeval/program/methyeval/linym/Epiclomal/snakemake/synthetic_data/Snakefile", line 29, in <module>

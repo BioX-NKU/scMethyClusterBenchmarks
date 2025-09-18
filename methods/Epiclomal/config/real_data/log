@@ -1,0 +1,16 @@
+ERROR conda.cli.main_run:execute(41): `conda run snakemake --forceall --keep-going -s ../../snakemake/real_data/Snakefile -p -r --nolock --configfile config.yaml --cores 8` failed. (See above for error)
+Building DAG of jobs...
+IncompleteFilesException:
+The files below seem to be incomplete. If you are sure that certain files are not incomplete, mark them as complete with
+
+    snakemake --cleanup-metadata <filenames>
+
+To re-generate the files rerun your command with the --rerun-incomplete flag.
+Incomplete files:
+../runs_epiclomal/0_0.95_10000/epi_region/570
+../runs_epiclomal/0_0.95_10000/epi_region/571
+
+CUTOFFS is
+0_0.95_10000
+{'OUTPUT_DIR': '../runs_epiclomal', 'CUTOFFS': '0_0.95_10000', 'INPUT_DIR': '../epiclomal_process/epiclomal_input', 'METH_F': 'input_Epiclomal_GSE87197.tsv.gz', 'REGION_F': 'regionIDs_input_Epiclomal_GSE87197.tsv.gz', 'TRUE_FILE': '../../../input/true_clone_membership.txt.gz', 'TRUE_PREVALENCES': 'None', 'NUM_EPI_ITERS': 1000, 'PARAMS': {'NPM': {'index': 'ch', 'max_k': 10, 'impute': 0, 'use_cache': 1}, 'EPICLOMAL': {'K': 10, 'slsbulk_iterations': 10, 'mu_has_k': True, 'convergence_tolerange': '1e-4', 'max_num_iters': 1000, 'Bishop_model_selection': False, 'check_uncertainty': True, 'config_file': '../config1.yaml'}}, 'SOFTWARE': {'hclust_software': '../../scripts/hclust.R', 'eval_software': '../../scripts/eval_epiclomal.R'}}
+

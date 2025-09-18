@@ -1,0 +1,36 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cluster nodes: 8
+Job stats:
+job                        count
+-----------------------  -------
+all                            1
+density_cut                    1
+densitycut_eval                1
+epiclomal_basic              300
+epiclomal_region             300
+euclidean_clust                1
+euclidean_eval                 1
+eval_basic                     1
+eval_region                    1
+generate_synthetic_data        1
+hamming_clust                  1
+hamming_eval                   1
+join_npm_methods               1
+pearson_clust                  1
+pearson_eval                   1
+process_npm_methods            1
+total                        614
+
+Select jobs to execute...
+
+[Sun Feb 25 17:40:35 2024]
+rule generate_synthetic_data:
+    output: ~/data/methyeval/linym/Epiclomal/synthetic_data/data/data_incomplete.tsv.gz, ~/data/methyeval/linym/Epiclomal/synthetic_data/data/regions_file.tsv.gz, ~/data/methyeval/linym/Epiclomal/synthetic_data/data/true_clone_membership.tsv.gz, ~/data/methyeval/linym/Epiclomal/synthetic_data/data/bulk_data_sample_1.tsv.gz, ~/data/methyeval/linym/Epiclomal/synthetic_data/data/true_clone_epigenotypes.tsv.gz
+    jobid: 2
+    reason: Missing output files: ~/data/methyeval/linym/Epiclomal/synthetic_data/data/data_incomplete.tsv.gz, ~/data/methyeval/linym/Epiclomal/synthetic_data/data/true_clone_epigenotypes.tsv.gz, ~/data/methyeval/linym/Epiclomal/synthetic_data/data/true_clone_membership.tsv.gz, ~/data/methyeval/linym/Epiclomal/synthetic_data/data/regions_file.tsv.gz, ~/data/methyeval/linym/Epiclomal/synthetic_data/data/bulk_data_sample_1.tsv.gz
+    resources: mem_mb=1000, mem_mib=954, disk_mb=1000, disk_mib=954, tmpdir=<TBD>, h_vmem=5
+
+RuleException in rule generate_synthetic_data in file /home/methyeval/program/methyeval/linym/Epiclomal/snakemake/synthetic_data/Snakefile, line 29:
+NameError: The name 'num_reg_flip' is unknown in this context. Please make sure that you defined that variable. Also note that braces not used for variable access have to be escaped by repeating them, i.e. {{print $1}}, when formatting the following:
+Rscript {config[SOFTWARE][generate_synthetic_software]} --saveall {config[PARAMS][GENERATE_SYNTHETIC][saveall]} --verbose {config[PARAMS][GENERATE_SYNTHETIC][verbose]} --clone_prevalence {config[PARAMS][ALL][prevalences]} --read_size {config[PARAMS][GENERATE_SYNTHETIC][read_size]} --region_size_type {config[PARAMS][GENERATE_SYNTHETIC][region_size_type]} --genotype_prob {config[PARAMS][GENERATE_SYNTHETIC][genotype_prob]} --num_regions {config[PARAMS][GENERATE_SYNTHETIC][num_regions]} --num_clones {config[PARAMS][GENERATE_SYNTHETIC][num_clones]} --num_cells {config[PARAMS][GENERATE_SYNTHETIC][num_cells]} --plot_data {config[PARAMS][GENERATE_SYNTHETIC][plot_data]} --prop_add_var {config[PARAMS][GENERATE_SYNTHETIC][prop_add_var]} --num_samples {config[PARAMS][GENERATE_SYNTHETIC][num_samples]} --missing_probability {config[PARAMS][GENERATE_SYNTHETIC][missing_probability]} --error_probability {config[PARAMS][GENERATE_SYNTHETIC][error_probability]} --num_loci {config[PARAMS][GENERATE_SYNTHETIC][num_loci]} --given_dir_complete {config[PARAMS][GENERATE_SYNTHETIC][given_dir_complete]} --phylogenetic_generation {config[PARAMS][GENERATE_SYNTHETIC][phylogenetic_generation]} --percent_regions_dirichlet_param {config[PARAMS][GENERATE_SYNTHETIC][percent_regions_dirichlet_param]} --dirichlet_param_genotype_prob {config[PARAMS][GENERATE_SYNTHETIC][dirichlet_param_genotype_prob]} --num_reg_flip {config[num_reg_flip]} --output_dir {DATA_DIRECTORY}

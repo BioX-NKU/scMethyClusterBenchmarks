@@ -1,0 +1,31 @@
+OUTPUT_DIR: '../runs_epiclomal'
+
+CUTOFFS: '0_0.95_10000'
+
+INPUT_DIR: '../epiclomal_process/epiclomal_input'
+METH_F: 'input_Epiclomal_GSE87197.tsv.gz'
+REGION_F: 'regionIDs_input_Epiclomal_GSE87197.tsv.gz'
+TRUE_FILE: '../../../input/true_clone_membership.txt.gz'
+TRUE_PREVALENCES: 'None'
+
+NUM_EPI_ITERS: 1000
+
+PARAMS:
+  NPM:
+    index: 'ch'
+    max_k: 10
+    impute: 0
+    use_cache: 1
+  EPICLOMAL:
+    K: 10
+    slsbulk_iterations: 10
+    mu_has_k: True
+    convergence_tolerange: 1e-4
+    max_num_iters: 1000
+    Bishop_model_selection: False
+    check_uncertainty: True
+    config_file: '../config1.yaml'
+
+SOFTWARE:
+  hclust_software: '../../scripts/hclust.R'
+  eval_software: '../../scripts/eval_epiclomal.R'

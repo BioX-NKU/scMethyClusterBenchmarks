@@ -1,0 +1,3 @@
+TypeError in file /home/methyeval/program/methyeval/linym/Epiclomal/snakemake/process_real_data/Snakefile, line 13:
+can only concatenate str (not "list") to str
+  File "/home/methyeval/program/methyeval/linym/Epiclomal/snakemake/process_real_data/Snakefile", line 13, in <module>

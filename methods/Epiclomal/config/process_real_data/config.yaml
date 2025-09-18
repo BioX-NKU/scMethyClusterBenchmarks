@@ -1,0 +1,38 @@
+PROCESS_REAL_DATA_DIR: '../../process_real_data'
+
+DATA_ID: 'GSE87197'
+OUTDIR: '../epiclomal_process/'
+
+COV_DIR: '../../../input/cell_files/'
+
+CELL_PATTERN: ".txt.gz"
+
+REGION_FILE: 'cpgIslandExt.txt'
+TRUE_FILE: '../../../input/true_clone_membership.txt.gz'
+
+CPG_COORDS:
+  NAME_REGIONS: 'GSE87197'
+  GENOME_LIBRARY: 'BSgenome.Hsapiens.UCSC.hg38'
+  TYPE_OF_C: 'CpG'
+
+CELL_BASED_METH:
+  INCLUDE_CHRY: 1
+  DATA_TYPE: 'Farlik'
+  GENOME: 'human'
+
+STATS_METHYLATION:
+  ALL_CUTOFFS: 
+    - "0_0.95_10000"
+  FILTER_REGIONS_SAME_METH: 1
+  PLOT_HEATMAP_FILTERED: 1
+  PLOT_HEATMAP_UNFILTERED: 1
+
+FILTER_REGIONS:
+  FILTER: False
+  COEF_THRESHOLD: 0.95
+  MEAN_DIFF_THRESHOLD: 0.05
+  N_TO_KEEP: 1000
+
+READY_EPICLOMAL:
+  FILTER_CPG_NO_DATA: 0
+  LUODIAMOND: 0

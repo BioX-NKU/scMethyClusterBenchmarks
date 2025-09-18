@@ -1,0 +1,3 @@
+KeyError in file /home/methyeval/program/methyeval/linym/Epiclomal/snakemake/process_real_data/Snakefile, line 13:
+'COV_DIR'
+  File "/home/methyeval/program/methyeval/linym/Epiclomal/snakemake/process_real_data/Snakefile", line 13, in <module>
