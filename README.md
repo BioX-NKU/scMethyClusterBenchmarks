@@ -17,6 +17,17 @@ We provide all scripts required to run and evaluate the methods described in thi
 
 For detailed descriptions of the experimental implementation, please refer to the corresponding sections of our paper.
 
+## Setting up Anaconda environments for methods
+
+The required Anaconda environments for each method are provided in the RAR package at [Google Drive](https://drive.google.com/file/d/1pCAlUV4JbrE8j8tC-9EOCYQWVkrNk7D4/view?usp=drive_link).
+
+Users can extract the files to access the environment configurations for each tool:
+
+- `Louvain.rar`: Includes environments for `Louvain`, `Louvain-C`, `Leiden`, and `Leiden-C`.
+- `Melissa.rar`: Contains the Anaconda environment for the `Melissa` application.
+- `Epiclomal.rar`: Provides environments for both `EpiclomalBasic` and `EpiclomalRegion`.
+- `scMelody.rar`: Includes environments for `scMelody` and `scMelody-C`.
+
 ## Adjustment of your datasets to fit our processing pipeline
 
 Users should place their original datasets in the **`raw_data`** folder. To ensure compatibility with our processing pipeline, the datasets must be structured in the following way:
